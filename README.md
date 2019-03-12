@@ -9,6 +9,7 @@
 ```
     1.Web App Manifest: 将webapp添加到桌面，类似原生app图标的作用
     2.serviceWorker: 提供了弱网下的离线缓存机制和与页面的通信(postmessage)机制
+      Service Worker有一个非常重要的特性：你可以在Service Worker中监听所有客户端（Web）发出的请求，然后通过Service Worker来代理，向后端服务发起请求。通过监听用户请求信息，Service Worker可以决定是否使用缓存来作为Web请求的返回。
     3.Notification API:使用Notification API来进行消息提醒
       Push API: 使用Push API 来进行消息推送
     4.
