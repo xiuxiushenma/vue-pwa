@@ -28,6 +28,8 @@
     3.发一个请求将图片都添加到页面
     4.利用manifinest将应用放到桌面上
     5.在index.html中注册serviceWorker
+    这样就能使用桌面图标了
+    6.serviceWorker在的代码流程在代码中又体现，如果是要查看缓存效果的话，在network中点击offline关闭网络，刷新，在network中查看all，可以看出缓存来自与两部份，serviceWorker和catche
 ```
 
 ### 注意点
