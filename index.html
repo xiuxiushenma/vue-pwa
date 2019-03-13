@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div>
+        <h3>漫画图片</h3>
+        <ul id="content">
+
+        </ul>
+    </div>
+    <script src="main.js"></script>
+    <script>
+        // 1.load事件 需要加载serviceWorker
+        window.addEventListener('load', () => {
+            // 2.判断是否支持
+            if ('serviceWorker' in navigator) {
+                // 3.注册serviceWorker
+                navigator.serviceWorker.register('/sw.js').then(resgisteration => {
+                    // 注册成功的
+                    // 4.开始写sw.js
+                    console.log(resgisteration)
+                })
+            }
+        });
+        // (index):1 Site cannot be installed: the page does not work offline
+        // serviceWoker 需要拦截我们的客户的请求
+    </script>
+</body>
+
+</html>

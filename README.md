@@ -21,3 +21,30 @@
     2.初步了解下workbox的使用
 ```
 
+### 操作流程
+```
+    1.先爬到图片路径，写入data.json
+    2.起一个express服务
+    3.发一个请求将图片都添加到页面
+    4.利用manifinest将应用放到桌面上
+    5.在index.html中注册serviceWorker
+```
+
+### 注意点
+
+```
+manifinest:
+     1.manifinest的兼容性（ios 和 window）
+     2.manifinest的常用四个属性
+     3.manifinest的icon的size大小限制
+     4.manifinest能脱离serviceWorker使用吗
+
+serviceWorker:
+     5.不能访问/操作dom,全局对象是self，没有window
+     6.会自动休眠，不会随浏览器关闭而失效（必须手动卸载）
+     7.https和locahost下可用
+     8.所有api都是基于promise
+     9.离线缓存内容开发者可控
+     10.在所有元素加载完成之后注册，保证缓存完整内容
+
+```
